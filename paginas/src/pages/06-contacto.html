@@ -1,0 +1,84 @@
+<div class="aic" id="aic-contacto">
+<section class="aic-hero aic-hero--sub" style="min-height:min(60vh,560px)" aria-label="Contacto">
+  <div class="aic-hero__media">
+    <img class="is-on" src="@@/DJI_0435-scaled.jpg" alt="Obra de aic360 vista desde el aire" fetchpriority="high">
+  </div>
+  <div class="aic-wrap aic-hero__in">
+    <p class="aic-hero__crumb" data-in="1"><a href="/">Inicio</a> / Contacto</p>
+    <h1 data-in="2">Hablemos de tu obra</h1>
+    <p class="aic-lead" data-in="3">Cuéntanos qué necesitas construir, reformar o urbanizar. Te respondemos personalmente.</p>
+  </div>
+</section>
+<section class="aic-sec">
+  <div class="aic-wrap aic-contacto">
+    <div>
+      <h2 style="font-size:clamp(1.8rem,3vw,2.5rem)">Dónde estamos</h2>
+      <p class="aic-muted" style="margin:16px 0 30px">Puedes visitarnos con cita previa en cualquiera de nuestras dos oficinas.</p>
+      <div class="aic-sede">
+        <h3>Sevilla</h3>
+        <p>Torneo Parque Empresarial<br>Avda. de la Arquitectura, 3<br>Torre 7, planta 1, módulos 10 y 11<br>41015 Sevilla</p>
+        <a class="aic-link" href="https://www.google.com/maps/search/?api=1&amp;query=Torneo+Parque+Empresarial+Avenida+Arquitectura+3+41015+Sevilla" target="_blank" rel="noopener">Cómo llegar {{flecha}}</a>
+      </div>
+      <div class="aic-sede">
+        <h3>Villaverde del Río</h3>
+        <p>C/ San Sebastián, 2<br>41318 Villaverde del Río (Sevilla)</p>
+        <a class="aic-link" href="https://www.google.com/maps/search/?api=1&amp;query=Calle+San+Sebastian+2+41318+Villaverde+del+Rio+Sevilla" target="_blank" rel="noopener">Cómo llegar {{flecha}}</a>
+      </div>
+      <div class="aic-sede">
+        <h3>Correo electrónico</h3>
+        <p><a class="aic-link" href="mailto:info@aic360.es">info@aic360.es</a></p>
+      </div>
+    </div>
+    <form class="aic-form" data-mailto="info@aic360.es" novalidate>
+      <h2 style="font-size:clamp(1.6rem,2.6vw,2.1rem);margin-bottom:8px">Solicita información o presupuesto</h2>
+      <p class="aic-muted" style="margin-bottom:28px">Los campos marcados como obligatorios son los mínimos para poder contestarte.</p>
+      <div class="aic-form__grid">
+        <div class="aic-campo"><label for="aic-nombre">Nombre <small>(obligatorio)</small></label><input id="aic-nombre" name="nombre" type="text" autocomplete="name" required><span class="aic-error" data-err="nombre" aria-live="polite"></span></div>
+        <div class="aic-campo"><label for="aic-empresa">Empresa u organismo</label><input id="aic-empresa" name="empresa" type="text" autocomplete="organization"><span class="aic-error"></span></div>
+        <div class="aic-campo"><label for="aic-email">Correo <small>(obligatorio)</small></label><input id="aic-email" name="email" type="email" autocomplete="email" required><span class="aic-error" data-err="email" aria-live="polite"></span></div>
+        <div class="aic-campo"><label for="aic-tel">Teléfono</label><input id="aic-tel" name="telefono" type="tel" autocomplete="tel" inputmode="tel"><span class="aic-error" data-err="telefono" aria-live="polite"></span></div>
+        <fieldset class="aic-campo aic-campo--full" style="border:0;padding:0;margin:0;min-width:0">
+          <legend style="font-weight:600;font-size:.95rem;margin-bottom:8px;padding:0">Tipo de proyecto</legend>
+          <div class="aic-tipos">
+            <label><input type="radio" name="tipo" value="Industrial y terciario"><span>Industrial y terciario</span></label>
+            <label><input type="radio" name="tipo" value="Edificación"><span>Edificación</span></label>
+            <label><input type="radio" name="tipo" value="Obra civil"><span>Obra civil</span></label>
+            <label><input type="radio" name="tipo" value="Otro"><span>Otro</span></label>
+          </div>
+        </fieldset>
+        <div class="aic-campo aic-campo--full"><label for="aic-ubicacion">Ubicación de la obra</label><input id="aic-ubicacion" name="ubicacion" type="text" placeholder="Municipio o dirección aproximada"><span class="aic-error"></span></div>
+        <div class="aic-campo aic-campo--full"><label for="aic-mensaje">Cuéntanos tu proyecto <small>(obligatorio)</small></label><textarea id="aic-mensaje" name="mensaje" required placeholder="Qué quieres hacer, superficie aproximada, plazos, si tienes ya proyecto técnico…"></textarea><span class="aic-error" data-err="mensaje" aria-live="polite"></span></div>
+        <div class="aic-campo aic-campo--full"><label class="aic-check"><input type="checkbox" name="privacidad" required> <span>He leído y acepto la política de privacidad. aic360 usará mis datos solo para responder a esta consulta.</span></label><span class="aic-error" data-err="privacidad" aria-live="polite"></span></div>
+      </div>
+      <div class="aic-form__pie">
+        <button type="submit" class="aic-btn">Preparar mensaje {{flecha}}</button>
+        <p class="aic-form__nota">Se abrirá tu programa de correo con el mensaje ya redactado para enviarlo a info@aic360.es.</p>
+      </div>
+      <div class="aic-aviso" role="status" tabindex="-1"><b>Mensaje preparado.</b> Revisa tu programa de correo y pulsa enviar. Si no se ha abierto, escríbenos directamente a <a class="aic-link" href="mailto:info@aic360.es">info@aic360.es</a>.</div>
+    </form>
+  </div>
+</section>
+<section class="aic-sec aic-sec--papel aic-sec--tight">
+  <div class="aic-wrap" data-mapa>
+    <div class="aic-mapa__tabs" role="tablist" aria-label="Elegir oficina">
+      <button type="button" role="tab" aria-selected="true" data-q="Torneo Parque Empresarial, Avenida de la Arquitectura 3, 41015 Sevilla">Sevilla</button>
+      <button type="button" role="tab" aria-selected="false" data-q="Calle San Sebastián 2, 41318 Villaverde del Río, Sevilla">Villaverde del Río</button>
+    </div>
+    <div class="aic-mapa"><iframe title="Mapa: Sevilla" src="https://maps.google.com/maps?q=Torneo%20Parque%20Empresarial%2C%20Avenida%20de%20la%20Arquitectura%203%2C%2041015%20Sevilla&amp;z=15&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+  </div>
+</section>
+<section class="aic-sec">
+  <div class="aic-wrap">
+    <div class="aic-head">
+      <h2>Qué pasa después</h2>
+      <p class="aic-muted">Así es el recorrido desde tu primer mensaje hasta el inicio de obra.</p>
+    </div>
+    <ol class="aic-proceso">
+      <li class="aic-paso"><span class="aic-num">Paso 1</span><h3>Recibimos tu consulta</h3><p>Leemos tu mensaje y, si falta algún dato, te escribimos o te llamamos.</p></li>
+      <li class="aic-paso"><span class="aic-num">Paso 2</span><h3>Visita o reunión</h3><p>Vemos el terreno o el edificio y revisamos contigo la documentación disponible.</p></li>
+      <li class="aic-paso"><span class="aic-num">Paso 3</span><h3>Propuesta</h3><p>Te enviamos un presupuesto detallado por partidas y un calendario de obra.</p></li>
+      <li class="aic-paso"><span class="aic-num">Paso 4</span><h3>Inicio de obra</h3><p>Firmamos, asignamos un responsable de proyecto y arrancamos.</p></li>
+    </ol>
+  </div>
+</section>
+</div>
