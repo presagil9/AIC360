@@ -28,9 +28,26 @@ Notas:
 - La cabecera con el menú y el pie de página siguen siendo los del tema.
 - Si usas un plugin de caché u optimización (WP Rocket, Autoptimize…), vacía la caché después de pegar.
 
+## Enlaces entre páginas
+
+Todos los botones y enlaces apuntan a las direcciones completas:
+
+| Enlace | Dirección |
+|---|---|
+| Inicio | `https://aic360.es/` |
+| Servicios | `https://aic360.es/?page_id=36` |
+| Industrial y terciario | `https://aic360.es/?page_id=40` |
+| Edificación | `https://aic360.es/?page_id=42` |
+| Obra civil | `https://aic360.es/?page_id=46` |
+| Contacto | `https://aic360.es/?page_id=49` |
+
+- Las páginas tienen que estar **publicadas**. Si una está en borrador (por ejemplo, la de Servicios si solo se abre con `&preview=true`), quien no haya iniciado sesión verá un error 404 al pulsar su enlace.
+- Si cambias una dirección (por ejemplo, al activar los enlaces permanentes bonitos), edita el bloque `ENLACES` de `build.py` y vuelve a generar las páginas.
+- El menú de la cabecera es del tema: se configura en *Apariencia → Menús* (o *Apariencia → Editor → Navegación* en temas de bloques). Para que las tres áreas cuelguen de Servicios, arrástralas debajo de Servicios como subelementos.
+
 ## Imágenes
 
-Las rutas apuntan a `/wp-content/uploads/2026/10/…`, que es donde están las fotos que subiste a la biblioteca de medios. Si cambias o renombras una foto, busca su nombre en el archivo y sustitúyelo.
+Las rutas apuntan a `https://aic360.es/wp-content/uploads/2026/10/…`, que es donde están las fotos que subiste a la biblioteca de medios. Si cambias o renombras una foto, busca su nombre en el archivo y sustitúyelo.
 
 Las fotos de la galería abren un visor a pantalla completa: se cierra con *Esc* y se navega con las flechas del teclado o deslizando en el móvil.
 
@@ -65,4 +82,5 @@ Cada página se ha probado en Chromium, dentro de un tema de prueba con estilos 
 - visor de galería: abrir, pasar de foto y cerrar con *Esc*;
 - formulario: errores de campos obligatorios, correo mal escrito y aviso final;
 - mapa: el cambio entre Sevilla y Villaverde del Río funciona;
+- enlaces: se ha pulsado cada uno de los 35 enlaces internos y todos llevan a su página;
 - con JavaScript desactivado el contenido se sigue viendo.

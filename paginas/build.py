@@ -11,13 +11,24 @@ RAIZ = pathlib.Path(__file__).resolve().parent
 SRC = RAIZ / "src"
 SALIDA = RAIZ / "wordpress"
 
-UPLOADS = "/wp-content/uploads/2026/10"
+UPLOADS = "https://aic360.es/wp-content/uploads/2026/10"
 FLECHA = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" '
           'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'
           '<path d="M5 12h14M13 6l6 6-6 6"/></svg>')
 FUENTES = ('<link rel="preconnect" href="https://fonts.googleapis.com">'
            '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
            '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&amp;display=swap">')
+
+# Direcciones de cada página. Si alguna cambia, se modifica aquí y se vuelve a generar.
+WEB = "https://aic360.es"
+ENLACES = {
+    "inicio": WEB + "/",
+    "servicios": WEB + "/?page_id=36",
+    "industrial": WEB + "/?page_id=40",
+    "edificacion": WEB + "/?page_id=42",
+    "obracivil": WEB + "/?page_id=46",
+    "contacto": WEB + "/?page_id=49",
+}
 
 TITULOS = {
     "01-inicio": "Inicio (página principal)",
@@ -48,6 +59,8 @@ def main():
     for pagina in sorted((SRC / "pages").glob("*.html")):
         html = pagina.read_text(encoding="utf-8")
         html = html.replace("@@", UPLOADS).replace("{{flecha}}", FLECHA)
+        for clave, url in ENLACES.items():
+            html = html.replace("{{" + clave + "}}", url)
         html = sin_lineas_vacias(html)
         assert "{{" not in html and "@@" not in html, pagina.name
         bloque = "\n".join([
